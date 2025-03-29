@@ -1,0 +1,42 @@
+<div class="navbar">
+    <div class="logo">
+        <a routerLink="home">
+            <img src="assets/BookWormAI.jpeg" alt="BookWormAI" style="width: 4rem; height: 4rem;">
+        </a>
+    </div>
+    <div>
+        <a routerLink="home">
+            <h1>BookWormAI</h1>
+        </a>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search for books" [(ngModel)]="searchTerm">
+        <button>Search</button>
+    </div>
+    <div class="navbar-item">
+        <a>
+            <h3>Top Books</h3>
+        </a>
+    </div>
+    <div class="navbar-item">
+        <select name="genre" [value]="genre" [(ngModel)]="genre">
+            <option value="">Select Genre</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Sci-Fi">Sci-Fi</option>
+        </select>
+    </div>
+    <div class="navbar-item">
+        <h3>Blogs</h3>
+    </div>
+    <div class="navbar-item">
+        <h2 routerLink="chat">Chat with AI</h2>
+    </div>
+    <div class="navbar-item">
+        <a routerLink="about">
+            <h4>About</h4>
+        </a>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
