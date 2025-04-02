@@ -18,7 +18,7 @@ export class HomeComponent {
   bookName: String = '';
 
   constructor(private http: HttpClient) {
-    this.http.get("http://127.0.0.1:5000/books").subscribe((result: any) => {
+    this.http.get("https://bookwormai-backend.onrender.com/books").subscribe((result: any) => {
       this.bookList = result;
     });
   }

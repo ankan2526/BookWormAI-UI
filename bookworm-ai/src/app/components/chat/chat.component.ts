@@ -29,7 +29,7 @@ export class ChatComponent {
       //   this.messages.push({ text: 'This is an AI response.', sender: 'ai' });
       // }, 1000);
 
-      this.http.post("http://127.0.0.1:5000/llm/invoke", {"query": this.userInput}).subscribe((result: any) => {
+      this.http.post("https://bookwormai-backend.onrender.com/llm/invoke", {"query": this.userInput}).subscribe((result: any) => {
         this.messages.push({text: result.result, sender: 'ai'});
       })
 
